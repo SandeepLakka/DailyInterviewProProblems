@@ -3,6 +3,8 @@
 
 name: Java CI with Maven
 
+env:
+ SONAR_TOKEN : ${{secrets.SONAR_TOKEN}}
 on:
   push:
     branches: [ master ]
