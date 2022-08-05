@@ -18,14 +18,6 @@ package io.github.sandeeplakka;
  */
 public class BinarySum {
 
-    public static void main(String[] args) {
-        BinarySum ut = new BinarySum();
-        String bin1, bin2;
-        bin1 = bin2 = "1100";
-        String expected = "11000";
-        ut.binarySum(bin1, bin2);
-    }
-
     public String binarySum(String bin1, String bin2) {
         StringBuilder builder = new StringBuilder();
         int len1 = bin1.length() - 1;
@@ -50,6 +42,17 @@ public class BinarySum {
         return builder.reverse().toString();
     }
 
+    /*
+        val1    val2    carry   |   val carry
+        0       0       0       |   0   0
+        0       0       1       |   0   1
+        0       1       0       |   0   1
+        0       1       1       |   1   0
+        1       0       0       |   0   1
+        1       0       1       |   1   0
+        1       1       0       |   1   0
+        1       1       1       |   1   1
+     */
     private int addAndReturnCarry(String bin1, String bin2, StringBuilder builder,
                                   int len1, int len2, boolean isOne, boolean isTwo, int carry) {
         int val;
