@@ -19,23 +19,8 @@ package io.github.sandeeplakka;
  * </pre>
  */
 public class Base2Converter {
-    public static void main(String[] args) {
-        Base2Converter ut = new Base2Converter();
-
-        //1010
-        System.out.println(ut.convertToBase2(10));
-        //10
-        System.out.println(ut.convertToBase2(2));
-        //0
-        System.out.println(ut.convertToBase2(0));
-        //111
-        System.out.println(ut.convertToBase2(7));
-    }
 
     public String convertToBase2(int number) {
-        /*
-
-         */
         if (number == 0) return String.valueOf(0);
         StringBuilder builder = new StringBuilder();
         while (number > 0) {

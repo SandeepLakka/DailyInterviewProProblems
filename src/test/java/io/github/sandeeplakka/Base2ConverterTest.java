@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class Base2ConverterTest {
 
     private Base2Converter ut;
+
     @BeforeEach
     void setUp() {
         ut = new Base2Converter();
