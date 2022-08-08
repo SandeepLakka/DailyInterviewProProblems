@@ -1,8 +1,5 @@
 package io.github.sandeeplakka;
 
-import java.util.stream.DoubleStream;
-import java.util.stream.IntStream;
-
 /**
  * This problem was recently asked by AirBNB:
  * <p>
