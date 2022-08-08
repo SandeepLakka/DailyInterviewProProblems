@@ -23,15 +23,11 @@ import java.util.stream.IntStream;
  */
 public class PowerFunction {
 
-    public static void main(String[] args) {
-        PowerFunction ut = new PowerFunction();
-        System.out.println(ut.OofNSolution(5, 3));
-        System.out.println(ut.logOfNSolution(5, 3));
-    }
-
-    //TODO: problem statement required solution
+    //logarithmic time complexity wrt to n
     public int logOfNSolution(int x, int n) {
-        throw new AbstractMethodError("not yet implemented");
+        if (n == 0) return 1;
+        if (n == 1) return x;
+        return logOfNSolution(x, n / 2) * logOfNSolution(x, n - n / 2);
     }
 
     //bruteforce solution
