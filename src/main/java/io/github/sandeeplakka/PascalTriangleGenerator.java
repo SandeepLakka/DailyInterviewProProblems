@@ -21,13 +21,6 @@ import java.util.stream.IntStream;
  */
 public class PascalTriangleGenerator {
 
-    public static void main(String[] args) {
-        PascalTriangleGenerator ut = new PascalTriangleGenerator();
-        //[1, 5, 10, 10, 5, 1]
-        //System.out.println(Arrays.toString(ut.getPascalTriangleRow(6)));
-    }
-
-
     //Increased space to reduce time
     public int[] getPascalTriangleRow(int row) {
         int[][] values = new int[row][row];
