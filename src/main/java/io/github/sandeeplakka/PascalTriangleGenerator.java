@@ -24,17 +24,15 @@ public class PascalTriangleGenerator {
     //Increased space to reduce time
     public int[] getPascalTriangleRow(int row) {
         int[][] values = new int[row][row];
-        for (int[] arr : values) {
-            Arrays.fill(arr, -1);
-        }
         int n = row - 1;
         return IntStream.rangeClosed(0, n).map(x -> {
-            if (values[n][x] != -1) return values[n][x];
-            if (values[n][n - x] != -1) return values[n][n - x];
+            if (values[n][x] != 0) return values[n][x];
+            if (values[n][n - x] != 0) return values[n][n - x];
             return values[n][x] = getNcX(n, x);
         }).toArray();
     }
 
+    //TODO better efficient impl
     private int getNcX(int n, int x) {
         int nominator = IntStream.rangeClosed(n - x + 1, n).reduce(1, (left, right) -> left * right);
         int denominator = IntStream.rangeClosed(1, x).reduce(1, (left, right) -> left * right);
